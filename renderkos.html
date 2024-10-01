@@ -1,0 +1,30 @@
+<html></html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Kar=function karthik(e){
+                var [a,setA]=React.useState("")
+                function kkk(e){
+                    setA(event.target.value)
+            }
+                return(
+
+                    <div>
+                        <select onChange={(()=>{kkk(e)})}>
+                            <option value="india">india</option>
+                            <option value="unitedkingdom">uk</option>
+                            <option value="united">usa</option>
+                            </select>
+                        <h1>{a}</h1>
+                        </div>
+                )
+                    }
+            ReactDOM.render(<Kar/>,document.getElementById("d1"));
+        </script>
+    </body>
+</html>

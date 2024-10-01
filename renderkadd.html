@@ -1,0 +1,38 @@
+<html></html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Kar=function karthik(e){
+                var [a,setA]=React.useState("")
+                var [k,setK]=React.useState("")
+                var [r,setR]=React.useState("")
+                function kkk(e){
+                    setA(+event.target.value)
+            }
+                function kk(e){
+                    setK(+event.target.value)
+            }
+            function add(e){
+                setR(a+k)
+            }
+                return(
+
+                    <div>
+                        <input id="d2" type="text" onChange={(()=>{kkk(e)})}/>
+                        <br/>
+                        <input id="d2" type="text" onChange={(()=>{kk(e)})}/>
+                        <br/>
+                        <button onClick={(()=>{add(e)})}>add</button>
+                        <h1>{r}</h1>
+                        </div>
+                )
+                    }
+            ReactDOM.render(<Kar/>,document.getElementById("d1"));
+        </script>
+    </body>
+</html>

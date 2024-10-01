@@ -1,0 +1,46 @@
+<html></html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Kar=function karthik(e){
+                var [a,setA]=React.useState([])
+                
+                function kkk(e){
+                    if(e.target.checked===false){
+                        var uk=a.filter((a)=>e.target.value)
+                        setA([...a,event.target.value])
+                    }else{
+                        setA([...a,e.target.value])
+                    }
+            }
+                return(
+
+                    <div>
+                        <input type="checkbox" name="kvk" id="" value="react" onChange={(()=>{kkk(e)})}/>react
+                        <br/>
+                        <input type="checkbox" name="kvk" id="" value="angular" onChange={(()=>{kkk(e)})}/>angular
+                        <br/>
+                        <input type="checkbox"name="kvk" id="" value="node" onChange={(()=>{kkk(e)})}/>node
+                        <br/>
+                        <input type="checkbox" name="kvk" id="" value="expres" onChange={(()=>{kkk(e)})}/>expres
+                        <br/>
+                        <input type="checkbox" name="kvk" id="" value="mongo" onChange={(()=>{kkk(e)})}/>mongo
+                        <br/>
+                        <input type="checkbox" name="kvk" id="" value="mongoos" onChange={(()=>{kkk(e)})}/>mongoos
+                        <br/>
+                        <input type="checkbox"name="kvk" id="" value="mysql" onChange={(()=>{kkk(e)})}/>mysql
+                        <br/>
+                        <input type="checkbox" name="kvk" id="" value="java" onChange={(()=>{kkk(e)})}/>java
+                        <h1>{a}</h1>
+                        </div>
+                )
+                    }
+            ReactDOM.render(<Kar/>,document.getElementById("d1"));
+        </script>
+    </body>
+</html>

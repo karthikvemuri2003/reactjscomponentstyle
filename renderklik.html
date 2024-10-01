@@ -1,0 +1,31 @@
+<html></html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Kar=function (){
+                var [a,setA]=React.useState(0)
+                var [k,setK]=React.useState(0)
+                function kk(){
+                    setA(++a)
+                }
+                function kkk(){
+                    setK(++k)
+                }
+                return(
+                    <div>
+                        <h1>like:{k}</h1>
+                            <button onClick={kkk}>karthik</button>
+                            <h1>dislik:{a}</h1>
+                                <button onClick={kk}>karthik</button>
+                        </div>
+                )
+            }
+            ReactDOM.render(<Kar/>,document.getElementById("d1"));
+        </script>
+    </body>
+</html>

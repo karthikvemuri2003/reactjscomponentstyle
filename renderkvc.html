@@ -1,0 +1,32 @@
+<html></html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Kar=function kkk(e){
+                var [a,setA]=React.useState("")
+                var [k,setK]=React.useState("")
+                function vk(e){
+                  k=(e.target.value)
+
+                }
+                function v(){
+                    setA(k)
+                    console.log(k)
+                    a=k;
+                }
+                return (<div>
+                    <input type="text" onChange={((e)=>{vk(e)})}/>
+                    <button onClick={(()=>{v()})}>karthik</button>
+                    <h1>{a}</h1>
+                    </div>)
+            }
+            ReactDOM.render(<Kar/>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

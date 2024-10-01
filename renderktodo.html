@@ -1,0 +1,36 @@
+<html></html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Kar=function kkk(e){
+                var [k,setK]=React.useState([])
+                var [a,setA]=React.useState("")
+                function vk(e){
+                   setA(e.target.value)
+                }
+                function v(){
+                    setK([...k,a]);
+                    setA("");
+                }
+                function del(i){
+                  k.splice(i,1)
+                  setK([...k])
+                }
+                return (<div>
+                    <input type="text" value={a} onChange={vk} />
+                    <button onClick={(()=>{v(e)})}>addk</button>
+                    <ul>{k.map((x,i)=>{
+                        return (<li>{x}<button onClick={(()=>{del(i)})}>del</button></li>)
+                    })}</ul>
+                    </div>)
+            }
+            ReactDOM.render(<Kar/>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>
